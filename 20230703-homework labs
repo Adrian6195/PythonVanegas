@@ -14,30 +14,8 @@ else:
 	else:
 		print("Leap year")
 
-#LAB 3.2.1.3################################################################################################
+#LAB 3.2.1.3###################################################################################################
 
-secret_number = 777
-
-print(
-"""
-+================================+
-| Welcome to my game, muggle!    |
-| Enter an integer number        |
-| and guess what number I've     |
-| picked for you.                |
-| So, what is the secret number? |
-+================================+
-""")
-
-number = int(input( ))
-while number != 777:
-    print ("Ha ha! You're stuck in my loop!")
-    if number == 7:
-        print ("Getting closer...")
-else:
-    print("Well done, muggle! You are free now.")
-
-#LAB 3.2.1.6###################################################################################################
 secret_number = 777
 
 print(
@@ -52,13 +30,27 @@ print(
 """)
 
 number = int(input())
+import time
 
 while number != 777:
-    print ("Ha ha! You're stuck in my loop!\n"*20)
+    for sec in range(1, 8):
+        print(sec, "Ha ha! You're stuck in my loop!")
+        time.sleep(1)
     if number == 7:
         print ("Getting closer...")
     elif number == 77:
         print ("Even Closer!")
-    number = int(input("Try again!\n" ))
+    number = int(input("Try again:\n" ))
 else:
     print("Well done, muggle! You are free now.")
+
+LAB # 3.2.1.6#################################################################################################
+
+import time
+
+for sec in range(1, 6):
+    print(sec, "Mississippi")
+    time.sleep(1)
+	
+print("Ready or not, here I come!")
+
