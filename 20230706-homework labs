@@ -1,0 +1,57 @@
+# step 1
+beatles = []
+print("Step 1:", beatles)
+
+# step 2
+beatles.append("John Lennon")
+beatles.append("Paul McCartney")
+beatles.append("George Harrison")
+
+print("Step 2:", beatles)
+
+# step 3
+
+for name in range(2):
+    name_entered = str(input("Enter 'Stu Sutcliffe' and 'Pete Best' here: "))
+    if name_entered == "Stu Sutcliffe":
+        print("Successfully added band member"), beatles.append(name_entered)
+    elif name_entered == "Pete Best":
+        print("Successfully added band member"), beatles.append(name_entered)
+    else:
+        print ("Name NOT appended to list! Names are case sensitive.")
+print("Step 3:", beatles)
+
+# step 4
+del beatles[-1]
+del beatles[-1]
+print("Step 4:", beatles)
+
+# step 5
+beatles.insert(0,"Ringo Starr")
+print("Step 5:", beatles)
+
+
+# testing list legth
+print("The Fab", len(beatles))
+
+
+
+
+
+############################################################
+
+my_list = [1, 2, 4, 4, 1, 4, 2, 6, 2, 9]
+my_list.sort()
+new_list =[]
+new_list.sort()
+
+
+my_list.append(int(input("Which integer do you want to add to the list: ")))
+for number in my_list:
+    if number not in new_list:
+        new_list.append(number)
+        
+print("The list with unique elements only:")
+print(new_list)
+print("The list with duplicates included: ")
+print(my_list)
