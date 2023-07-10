@@ -1,0 +1,96 @@
+# 4.3.1.6
+year = int(input("Enter a year:"))
+
+def is_year_leap(year):
+    if year < 1582:
+        return False 
+    else:
+        if year % 4 != 0:
+            return False 
+        elif year % 100 != 0:
+            return True
+        elif year % 400 != 0:
+            return False
+        else:
+            return True
+
+test_data = [1900, 2000, 2016, 1987]
+test_results = [False, True, True, False]
+for i in range(len(test_data)):
+	yr = test_data[i]
+	print(yr,"->",end="")
+	result = is_year_leap(yr)
+	if result == test_results[i]:
+		print("OK")
+	else:
+		print("Failed")
+
+
+
+4.3.1.7
+def is_year_leap(year):
+	if year % 4 != 0:
+		return False
+	elif year % 100 != 0:
+		return True
+	elif year % 400 != 0:
+		return False
+	else:
+		return True
+
+def days_in_month(year,month): #sets up the parameters for the list to be created
+	month_days = [31,28,31,30,31,30,31,31,30,31,30,31] # defines the values for how many days in each month
+	if is_year_leap(year): # if custom function returns true
+	   if month == 2: # if month parameter == 2 is true
+	       return 29 
+	return month_days[month-1] # returns how many days in month entered and ensures it refs the correct index in the month_days list as the test data runs from 1 to 12.
+
+test_years = [1900, 2000, 2016, 1987]
+test_months = [ 2, 2, 1, 11]
+test_results = [28, 29, 31, 30]
+for i in range(len(test_years)):
+	yr = test_years[i]
+	mo = test_months[i]
+	print(yr,mo,"-> ",end="")
+	result = days_in_month(yr, mo)
+	if result == test_results[i]:
+		print("OK")
+	else:
+		print("Failed")
+
+4.3.1.8
+month_days = [31,28,31,30,31,30,31,31,30,31,30,31]
+month = [0,1,2,3,4,5,6,7,8,9,10,11,12]
+
+def is_year_leap(year):
+	if year % 4 != 0:
+		return False
+	elif year % 100 != 0:
+		return True
+	elif year % 400 != 0:
+		return False
+	else:
+		return True
+
+
+def days_in_month(year,month): #sets up the parameters for the list to be created
+	month_days = [31,28,31,30,31,30,31,31,30,31,30,31] # defines the values for how many days in each month
+	if is_year_leap(year): # if custom function returns true
+	   if month == 2: # if month parameter == 2 is true
+	       return 29 
+	return month_days[month-1] # returns how many days in month entered and ensures it refs the correct index in the month_days list as the test data runs from 1 to 12.
+
+def day_of_year(year, month, day):
+
+	if year < 1582:
+	    return None
+	if month < 1 or month > 12:
+	    return None
+	if day < 1 or day > 31:
+	    return None
+	else:
+	    # STUCK
+
+print(day_of_year(2000, 12, 31))
+
+
